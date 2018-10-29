@@ -1,5 +1,5 @@
-[![Go Report Card](https://goreportcard.com/badge/github.com/go-toolsmith/astp)](https://goreportcard.com/report/github.com/go-toolsmith/astp)
-[![GoDoc](https://godoc.org/github.com/go-toolsmith/astp?status.svg)](https://godoc.org/github.com/go-toolsmith/astp)
+[![Go Report Card](https://goreportcard.com/badge/github.com/go-toolsmith/typep)](https://goreportcard.com/report/github.com/go-toolsmith/typep)
+[![GoDoc](https://godoc.org/github.com/go-toolsmith/typep?status.svg)](https://godoc.org/github.com/go-toolsmith/typep)
 
 
 # typep
