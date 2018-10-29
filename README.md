@@ -14,4 +14,24 @@ go get -v github.com/go-toolsmith/typep
 
 ## Example
 
-> TODO: example with a test
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/go-toolsmith/typep"
+	"github.com/go-toolsmith/strparse"
+)
+
+func main() {
+	floatTyp := types.Typ[types.Float32]
+	intTyp := types.Typ[types.Int]
+	ptr := types.NewPointer(intTyp)
+	arr := types.NewArray(intTyp, 64)
+	fmt.Println(typep.IsBasicFloat(floatTyp)) // => true
+	fmt.Println(typep.IsBasicFloat(intTyp))   // => false
+	fmt.Println(typep.IsPointer(ptr))         // => true
+	fmt.Println(typep.IsArray(arr))           // => true
+}
+```
