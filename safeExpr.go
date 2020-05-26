@@ -38,6 +38,8 @@ func SideEffectFree(info *types.Info, expr ast.Expr) bool {
 		return SideEffectFree(info, expr.X)
 	case *ast.ParenExpr:
 		return SideEffectFree(info, expr.X)
+	case *ast.TypeAssertExpr:
+		return SideEffectFree(info, expr.X)
 	case *ast.CompositeLit:
 		return SideEffectFreeList(info, expr.Elts)
 	case *ast.CallExpr:
