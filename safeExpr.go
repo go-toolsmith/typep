@@ -20,6 +20,10 @@ func SideEffectFree(info *types.Info, expr ast.Expr) bool {
 	// whitelist to be on the conservative side.
 	// Can be extended as needed.
 
+	if expr == nil {
+		return true
+	}
+
 	switch expr := expr.(type) {
 	case *ast.StarExpr:
 		return SideEffectFree(info, expr.X)
@@ -31,6 +35,11 @@ func SideEffectFree(info *types.Info, expr ast.Expr) bool {
 			SideEffectFree(info, expr.X)
 	case *ast.BasicLit, *ast.Ident:
 		return true
+	case *ast.SliceExpr:
+		return SideEffectFree(info, expr.X) &&
+			SideEffectFree(info, expr.Low) &&
+			SideEffectFree(info, expr.High) &&
+			SideEffectFree(info, expr.Max)
 	case *ast.IndexExpr:
 		return SideEffectFree(info, expr.X) &&
 			SideEffectFree(info, expr.Index)
