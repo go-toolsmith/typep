@@ -3,7 +3,6 @@
 [![build-img]][build-url]
 [![pkg-img]][pkg-url]
 [![reportcard-img]][reportcard-url]
-[![coverage-img]][coverage-url]
 [![version-img]][version-url]
 
 Package `typep` provides type predicates.
@@ -51,7 +50,5 @@ func main() {
 [pkg-url]: https://pkg.go.dev/github.com/go-toolsmith/typep
 [reportcard-img]: https://goreportcard.com/badge/go-toolsmith/typep
 [reportcard-url]: https://goreportcard.com/report/go-toolsmith/typep
-[coverage-img]: https://codecov.io/gh/go-toolsmith/typep/branch/main/graph/badge.svg
-[coverage-url]: https://codecov.io/gh/go-toolsmith/typep
 [version-img]: https://img.shields.io/github/v/release/go-toolsmith/typep
 [version-url]: https://github.com/go-toolsmith/typep/releases
