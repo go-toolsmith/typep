@@ -12,6 +12,7 @@ func Example() {
 	intTyp := types.Typ[types.Int]
 	ptr := types.NewPointer(intTyp)
 	arr := types.NewArray(intTyp, 64)
+
 	fmt.Println(typep.HasFloatProp(floatTyp)) // => true
 	fmt.Println(typep.HasFloatProp(intTyp))   // => false
 	fmt.Println(typep.IsPointer(ptr))         // => true
